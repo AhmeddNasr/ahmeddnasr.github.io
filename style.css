@@ -1,0 +1,36 @@
+body,html{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(https://i.pinimg.com/originals/a9/dc/90/a9dc900a9079ae465a383282c1fcd145.jpg);
+}
+.btns{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hand{
+  margin: 10px;
+  padding: 30px;
+  background-color: lightgray;
+  border: 1px black solid;
+}
+
+.display{
+  margin-left: 1em;
+}
+.display p{
+  font-size: 20px;
+}
+.game p{
+  size: 30px;
+}
+
+.hand:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
