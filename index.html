@@ -1,86 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>JS Drum Kit</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="display">
-    <div class="game">
-      <p>Player 1 turn</p>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="logo">
+                <i class="fab fa-youtube fa-2x"></i>
+                <p class="logo-text">LanaTube</p>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search" class="search-input">
+                <button class="search-btn">
+                    <i class="fas fa-search search-logo"></i>
+                </button>
+            </div>
+            <div class="utilities">
+                <i class="fas fa-upload fa-2x"></i>
+                <i class="fas fa-th fa-2x"></i>
+                <i class="fas fa-bell fa-2x"></i>
+                <i class="fas fa-circle fa-2x"></i>
+            </div>
+        </div>
+        <div class="showcase">
+            <h1 class="main-title">Ana ba7ebek nek ya lana *-*</h3>
+            <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/yzP4kQhlPBY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>       
+            <div class="form">
+                <p>Do you love lana too?</p>
+                <button class="forma">YES</button>
+                <button class="forma">HELL YES</button>
+                <button class="forma" id="no">NO I AM RETARDED</button>
+            </div>
+        </div>
     </div>
-    <div class="results">
-      <p>Player 2 : <sans class="player1Victories"> 0 </sans></p>
-      <p>Player 1 : <sans class="player2Victories"> 0 </sans></p>
-    </div>
-
-    <div class="btns">
-      <div class="hand" id="rock">Rock</div>
-      <div class="hand" id="paper">Paper</div>
-      <div class="hand" id="scissors">Scissors</div>
-    </div>
-  </div>
-
-<script>
-  var player1;
-  var player2;
-  var results;
-  var player1Victories = 0;
-  var player2Victories = 0;
-
-  const player1VictoriesDisplay = document.querySelector(".player1Victories");
-  const player2VictoriesDisplay = document.querySelector(".player2Victories");
-  const game = document.querySelector('.game p');
-
-  const buttons = document.querySelectorAll('.hand');
-  buttons.forEach((button) => {
-    button.addEventListener('click', chooseHand);})
-  
-  function chooseHand(){
-    if(!player1){
-      player1 = this.id;
-      console.log(`player1 = ${this.id}`);
-      game.textContent = "Player 2 turn";
-    } else{
-      player2 = this.id;
-
-      if(player1 == "rock" && player2 == "scissors"){
-        player1Victory();
-      } else if(player1 =="scissors" && player2 == "paper"){
-        player1Victory();
-      } else if(player1 =="paper" && player2 == "rock"){
-        player1Victory();
-      } else if(player2 == "rock" && player1 == "scissors"){
-        player2Victory();
-      } else if(player2 =="scissors" && player1 == "paper"){
-        player2Victory();
-      } else if(player2 =="paper" && player1 == "rock"){
-        player2Victory();
-      } else{
-        game.textContent="TIE!";
-      }
-
-      player1 = undefined;
-    }
-  }
-
-  function player1Victory(){
-    results = "Player 1 victory";
-    player1Victories++;
-    game.textContent = results;
-    player1VictoriesDisplay.textContent = player1Victories;
-  }
-
-  function player2Victory(){
-    results = "Player 2 victory";
-    player2Victories++;
-    game.textContent = results;
-    player2VictoriesDisplay.textContent = player2Victories;
-  }
-
-</script>
-
 </body>
-</html>
+<script src="https://kit.fontawesome.com/deb8b3bb7a.js" crossorigin="anonymous"></script>
+<script>
+    noButton = document.querySelector('#no');
+    noButton.addEventListener('mouseover', () => {noButton.textContent = 'HELL FUCKING YES'});
+    noButton.addEventListener('mouseout', () => {noButton.textContent = 'NO I AM RETARDED'});
 
+    buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => button.addEventListener('click', () => {
+        showcase = document.querySelector('.form p');
+        showcase.textContent = "Enta bani2adam byefham *-*";
+    }))
+</script>
+</html>

@@ -1,36 +1,87 @@
-body,html{
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url(https://i.pinimg.com/originals/a9/dc/90/a9dc900a9079ae465a383282c1fcd145.jpg);
-}
-.btns{
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+@font-face {
+    font-family: 'gothic';
+    src: url('gothic.ttf');
 }
 
-.hand{
-  margin: 10px;
-  padding: 30px;
-  background-color: lightgray;
-  border: 1px black solid;
+
+body, html{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.display{
-  margin-left: 1em;
-}
-.display p{
-  font-size: 20px;
-}
-.game p{
-  size: 30px;
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: beige;
+    border-bottom: 1px rgb(194, 194, 165) block;
 }
 
-.hand:hover{
-  cursor: pointer;
-  transform: scale(1.1);
+.search-box{
+    display: flex;
+    align-items: center;
 }
+
+.search-input{
+    width: 20em;
+    padding: 0.4em;
+}
+
+.search-btn{
+    padding: 6px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin: 0px 5px;
+    font-family: gothic;
+}
+
+.logo i{
+    margin: 0 5px;
+    color: rgb(175, 175, 175);
+}
+
+.utilities i{
+    margin: 11px 5px;
+    color: rgb(179, 179, 179);
+}
+
+
+
+/* body */
+.showcase{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 15px;
+    background-image: url(https://fullhdpictures.com/wp-content/uploads/2015/04/Lana-Del-Rey-Wallpapers-0015.png);
+    height:100vh;
+}
+
+.form button{
+    padding: 15px;
+}
+
+.form{
+    font-family: fantasy;
+    font-size: 3em;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    padding-bottom: 1em;
+}
+
+.main-title{
+    font-family: cursive;
+}
+
+.forma{
+    cursor: pointer;
+
+}
+
 
