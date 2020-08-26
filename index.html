@@ -210,7 +210,7 @@
       var neededGPA = (desiredGPA * totalCredits) - (currentGPA * selectedSemester)
       neededGPA = neededGPA / creditsRemaining;
       if (desiredGPA > bestPossible) {
-        document.getElementById("minimum-grade-required").textContent = neededGPA
+        document.getElementById("minimum-grade-required").textContent = ":'("
       } else {
         document.getElementById("minimum-grade-required").textContent = neededGPA.toFixed(2);
       }
