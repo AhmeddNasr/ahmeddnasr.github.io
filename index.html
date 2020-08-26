@@ -1,53 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youtube</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="nav-bar">
-            <div class="logo">
-                <i class="fab fa-youtube fa-2x"></i>
-                <p class="logo-text">LanaTube</p>
-            </div>
-            <div class="search-box">
-                <input type="text" placeholder="Search" class="search-input">
-                <button class="search-btn">
-                    <i class="fas fa-search search-logo"></i>
-                </button>
-            </div>
-            <div class="utilities">
-                <i class="fas fa-upload fa-2x"></i>
-                <i class="fas fa-th fa-2x"></i>
-                <i class="fas fa-bell fa-2x"></i>
-                <i class="fas fa-circle fa-2x"></i>
-            </div>
-        </div>
-        <div class="showcase">
-            <h1 class="main-title">Ana ba7ebek nek ya lana *-*</h3>
-            <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/yzP4kQhlPBY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>       
-            <div class="form">
-                <p>Do you love lana too?</p>
-                <button class="forma">YES</button>
-                <button class="forma">HELL YES</button>
-                <button class="forma" id="no">NO I AM RETARDED</button>
-            </div>
-        </div>
-    </div>
-</body>
-<script src="https://kit.fontawesome.com/deb8b3bb7a.js" crossorigin="anonymous"></script>
-<script>
-    noButton = document.querySelector('#no');
-    noButton.addEventListener('mouseover', () => {noButton.textContent = 'HELL FUCKING YES'});
-    noButton.addEventListener('mouseout', () => {noButton.textContent = 'NO I AM RETARDED'});
 
-    buttons = document.querySelectorAll('button');
-    buttons.forEach((button) => button.addEventListener('click', () => {
-        showcase = document.querySelector('.form p');
-        showcase.textContent = "Enta bani2adam byefham *-*";
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-reboot.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-grid.css"> -->
+  <link rel="stylesheet" href="style.css">
+  <title>GPA Calculator | Calculate GPA - Set GPA goals - Learn all about GPA</title>
+</head>
+
+<body>
+  <nav>
+    <div class="container-fluid bg-dark logo-bar">
+      <p class="logo-custom">GPA Calculator</p>
+      <a href="#">about</a>
+    </div>
+
+    <nav class="navbar navbar-expand-md navbar-dark custom-lightdark justify-content-end">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        Tools
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav justify-content-between">
+          <li class="nav-item" id="semesterTab">
+            <a class="nav-link" href="#" id="semesterTab">Ferari ceo latest drawings</a>
+          </li>
+          <li class="nav-item active" id="goalTab">
+            <a class="nav-link" href="#" id="goalTab">Set GPA goal</a>
+          </li>
+          <li class="nav-item" id="guideTab">
+            <a class="nav-link" href="#" id="guideTab">please dont click me</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </nav>
+  <br>
+  <div class="body m-auto">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">Current GPA: </div>
+        <div class="col-md-4"><input type="number" id="currentGPA" required></div>
+        <div class="col-md-8">Current Semester: </div>
+        <div class="col-md-4">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonSemester"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Semester 5
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonSemester">
+              <a class="dropdown-item sem" href="#" id="57">Semester 5</a>
+              <a class="dropdown-item sem" href="#" id="76">Semester 6</a>
+              <a class="dropdown-item sem" href="#" id="96">Semester 7</a>
+              <a class="dropdown-item sem" href="#" id="116">Semester 8</a>
+              <a class="dropdown-item sem" href="#" id="137">Semester 9</a>
+              <a class="dropdown-item sem" href="#" id="158">Semester 10</a>
+            </div>
+          </div>
+
+        </div>
+        <hr style="width:90%;">
+
+        <!-- semester -->
+        <div class="container page" id="semesterTabContent">
+          <div class="body m-auto">
+            <div class="row">
+              <div class="col-md-8">
+                <img src="1.jpg" alt="" class="img-fluid">
+                <img src="2.jpg" alt="" class="img-fluid">
+                <img src="3.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <!-- SENESTER TABLES -->
+          <!-- <div class="body m-auto tab shown" id="tab-5">
+            <div class="row">
+              <div class="col-md-8">Pharmacology-1</div>
+              <div class="col-md-4">Grade</div>
+            </div>
+          </div> -->
+          <!-- <div class="body m-auto tab" id="tab-6">
+            TEST 2
+          </div>
+          <div class="body m-auto tab" id="tab-7">
+            TEST 3
+          </div>
+          <div class="body m-auto tab" id="tab-8">
+            TEST 3
+          </div>
+          <div class="body m-auto tab" id="tab-9">
+            TEST 3
+          </div>
+          <div class="body m-auto tab" id="tab-10">
+            TEST 35
+          </div> -->
+        </div>
+
+
+        <!-- GOAL TABLE-->
+        <div class="container page shown" id="goalTabContent">
+          <div class="body m-auto">
+            <div class="row">
+              <div class="col-md-8">Desired GPA</div>
+              <div class="col-md-4"><input type="number" placeholder="desired gpa" id="desiredGPA" required></div>
+
+              <div class="col-md-8">Credit hours that you failed</div>
+              <div class="col-md-4"><input type="number" placeholder="leave empty if n/a" id="failedCredits" disabled>
+              </div>
+
+              <div class="col-md-8">Credit hours completed from future semester</div>
+              <div class="col-md-4"><input type="number" placeholder="leave empty if n/a" id="futureCredits" disabled>
+              </div>
+
+              <div class="col-12"><button class="btn btn-dark" onclick="calculateGPA()">Calculate</button></div>
+            </div>
+            <br>
+            <div class="container">
+              <div class="row">
+                <div class="col-10">Best possible GPA: </div>
+                <div class="col-2 result" id="best-possible-gpa">???</div>
+                <div class="col-10">Minimum grade required per course: </div>
+                <div class="col-2 result" id="minimum-grade-required">???</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  <!-- SCRIPTS -->
+  <script src="https://kit.fontawesome.com/deb8b3bb7a.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script>
+  <script>
+    // Change tabs
+    const navItem = document.querySelectorAll(".nav-item");
+    navItem.forEach(item => item.addEventListener("click", () => {
+      const active = document.querySelector(".active");
+      active.classList.remove("active");
+      const tobehidden = document.querySelector(`#${active.id}Content`);
+      tobehidden.classList.remove("shown");
+      item.classList.add("active");
+      const tobeshown = document.querySelector(`#${item.id}Content`);
+      tobeshown.classList.add("shown");
     }))
-</script>
+
+    // Semester drop down menu
+    const dropMenu = document.querySelectorAll(".sem");
+    dropMenu.forEach(item => item.addEventListener("click", () => {
+      const actualDropMenu = document.querySelector("#dropdownMenuButtonSemester");
+      actualDropMenu.textContent = `${item.textContent}`;
+
+      //reset
+      const tabs = document.querySelectorAll(".tab");
+      tabs.forEach(tab => {
+        tab.classList.remove("shown");
+      })
+
+      // const semesterNumber = item.id;
+      // const selectedTable = document.querySelector(`#tab-${semesterNumber}`);
+      // selectedTable.classList.add("shown");
+    }))
+
+    //dorp menu
+    var selectedSemester = 57;
+
+    const semDrop = document.querySelectorAll(".sem");
+    semDrop.forEach(sem => sem.addEventListener("click", () => {
+      selectedSemester = sem.id;
+    }))
+
+    //Goal gpa calculations
+    function calculateGPA() {
+      //check
+      var failedCredits = document.getElementById("failedCredits").value;
+      var currentGPA = document.getElementById("currentGPA").value;
+      var desiredGPA = document.getElementById("desiredGPA").value;
+      var futureCredits = document.getElementById("futureCredits").value;
+
+      if (!(currentGPA && desiredGPA && selectedSemester != 0)) {
+        alert("Please fill all required entries");
+        return 0;
+      }
+      var totalCredits = 179;
+      var creditsRemaining = totalCredits - selectedSemester;
+      console.log(selectedSemester);
+      console.log(creditsRemaining);
+      var bestPossible = ((4 * creditsRemaining) + (selectedSemester * currentGPA)) / totalCredits;
+      document.getElementById("best-possible-gpa").textContent = bestPossible.toFixed(2);
+
+      var neededGPA = (desiredGPA * totalCredits) - (currentGPA * selectedSemester)
+      neededGPA = neededGPA / creditsRemaining;
+      console.log(neededGPA);
+      if (neededGPA > bestPossible) {
+        document.getElementById("minimum-grade-required").textContent = ":("
+      } else {
+        document.getElementById("minimum-grade-required").textContent = neededGPA.toFixed(2);
+      }
+    }
+  </script>
+</body>
+
 </html>
